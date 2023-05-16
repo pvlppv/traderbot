@@ -75,7 +75,7 @@ class ThrottlingMiddleware(BaseMiddleware):
         await asyncio.sleep(delta)
 
         # Check lock status
-        thr = await dispatcher.check_key(key)
+        await dispatcher.check_key(key)
 
         # If current message is not last with current key - do not send message
         # if thr.exceeded_count == throttled.exceeded_count:
