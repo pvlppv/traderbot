@@ -1,7 +1,7 @@
 from aiogram import Dispatcher
 
-from .IsGroupChatMessage import IsGroupChatMessage, IsGroupChatCallback
-from .IsPrivateChatMessage import IsPrivateChatMessage, IsPrivateChatCallback
+from .IsGroupChatMessage import IsGroupChatCallback, IsGroupChatMessage
+from .IsPrivateChatMessage import IsPrivateChatCallback, IsPrivateChatMessage
 
 
 def setup(dp: Dispatcher):
