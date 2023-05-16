@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  database:
+    container_name: ${POSTGRES_CONTAINER_NAME}
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_SERVER=${POSTGRES_SERVER}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      - ${POSTGRES_PORTS}
