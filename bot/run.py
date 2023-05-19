@@ -1,9 +1,9 @@
 import filters
 import middlewares
-from bot.utils.notify.admins import on_startup_notify
-from bot.utils.notify.admins import on_shutdown_notify
 from aiogram import executor
 from handlers import dp
+
+from bot.utils.notify.admins import on_shutdown_notify, on_startup_notify
 
 
 async def on_startup(dp):

@@ -1,5 +1,5 @@
-from .reply.keyboard import ReplyKeyboards
 from .inline.keyboard import InlineKeyboards
+from .reply.keyboard import ReplyKeyboards
 
 __all__ = [
     "ReplyKeyboards",
