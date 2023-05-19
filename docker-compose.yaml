@@ -9,6 +9,16 @@ services:
     ports:
       - ${BOT_PORTS}
     depends_on:
+      - backend
+
+  backend:
+    container_name: ${API_CONTAINER_NAME}
+    build: ./api
+    command: python ./main.py
+    restart: always
+    ports:
+      - ${API_PORTS}
+    depends_on:
       - database
 
   database:
