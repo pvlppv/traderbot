@@ -1,1 +1,5 @@
-from .keyboard import kb_inline
+from .keyboard import InlineKeyboards
+
+__all__ = [
+    "InlineKeyboards",
+]
