@@ -1,11 +1,12 @@
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram import types
+from keyboards.inline.buttons import InlineKeyboardsButtons
 
-kb_inline = InlineKeyboardMarkup(
-    row_width=1,
-    inline_keyboard=[
-        [
-            InlineKeyboardButton(text="➕", callback_data="add_task"),
-            InlineKeyboardButton(text="➖", callback_data="delete_task"),
-        ],
-    ],
-)
+
+class InlineKeyboards:
+    async def __init__(self) -> None:
+        self.keyboard = types.InlineKeyboardMarkup(row_width=1)
+        self.buttons = InlineKeyboardsButtons()
+
+    async def manage_task(self) -> types.InlineKeyboardButton:
+        return self.keyboard.add(self.buttons.add_task, 
+                                 self.buttons.delete_task)
