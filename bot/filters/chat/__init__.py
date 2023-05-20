@@ -1,6 +1,6 @@
 '''
-from .chat import (IsGroupChatCallback, IsGroupChatMessage,
-                   IsPrivateChatCallback, IsPrivateChatMessage)
+from .group import IsGroupChatCallback, IsGroupChatMessage
+from .private import IsPrivateChatCallback, IsPrivateChatMessage
 
 __all__ = [
     "IsGroupChatCallback",
