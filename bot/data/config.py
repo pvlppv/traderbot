@@ -1,8 +1,6 @@
-import os
+from utils import Environs
 
-from dotenv import load_dotenv
 
-load_dotenv()
-
-BOT_TOKEN: str = os.getenv("BOT_TOKEN")
-CURRENCY_API_TOKEN: str = os.getenv("CURRENCY_API_TOKEN")
+class ConfigData:
+    BOT_TOKEN: str = Environs.get("BOT_TOKEN")
+    CURRENCY_API_TOKEN: str = Environs.get("CURRENCY_API_TOKEN")
