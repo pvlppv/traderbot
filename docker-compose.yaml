@@ -11,19 +11,19 @@ services:
     depends_on:
       - backend
 
-  backend:
-    container_name: ${API_CONTAINER_NAME}
-    build: ./api
-    command: python ./main.py
+  cache:
+    container_name: ${REDIS_CONTAINER_NAME}
+    image: bitnami/redis:latest
+    command: 
     restart: always
+    environment:
+      - name=value
     ports:
-      - ${API_PORTS}
-    depends_on:
-      - database
+      - ${REDIS_PORTS}
 
   database:
     container_name: ${POSTGRES_CONTAINER_NAME}
-    image: postgres
+    image: postgres:latest
     restart: always
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
