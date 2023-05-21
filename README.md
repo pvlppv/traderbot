@@ -28,11 +28,12 @@ App for monitoring the exchange rate and cryptocurrency
    - [ ] 
    - [ ] 
 
-
  - [ ] Database
    - [ ] 
    - [ ] 
 
+- [ ] Cache
+   - [ ] Redis
 
 ## API
 ### Frameworks
