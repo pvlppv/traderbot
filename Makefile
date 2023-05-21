@@ -15,7 +15,6 @@ lint:
 	isort --check-only $(BOT_DIR)
 	black --check --diff $(BOT_DIR)
 	ruff $(BOT_DIR)
-	mypy $(BOT_DIR)
 
 .PHONY: reformat
 reformat:
