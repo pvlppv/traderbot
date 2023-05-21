@@ -3,12 +3,10 @@ App for monitoring the exchange rate and cryptocurrency
 
 
 ## TODO
- - [ ] Complete telegram bot
+ - [ ] Complete telegram bot  
    - [ ] Refactor code
    - [ ] Make tech support
    - [ ] Write an admin system
-
- - [ ] Complete own API
    - [ ] Make models
    - [ ] Make schemas 
    - [ ] Make CRUD requests
